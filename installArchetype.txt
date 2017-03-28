@@ -1,0 +1,26 @@
+Install archetype
+Dokumentace v gDisku pod sloškou Maven a archetype
+
+Base directory pøes File system: D:\Projects\My\JBoss\QuickStartSCABinding\sca-binding-test\target\generated-sources\archetype
+
+mvn install
+v eclipse
+Goals: install
+
+Pak musím použít archetype
+In repository folder c:\Users\Sam\.m2\repository\ pøidej nový záznam do file archetype-catalog.xml
+
+Musel jsem tento záznma dát jako první aby ho maven spustil
+<archetype>
+      <groupId>cz.baros.wildfly.sy.sca</groupId>
+      <artifactId>sca-binding-test-archetype</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+      <description>Parent template for a switchyard ear project</description>
+    </archetype>
+
+
+Use your archetype
+
+$ mkdir /tmp/archetype - vytvoø nový adresáø kde se vygeneruje novy projekt
+$ cd /tmp/archetype 
+$ mvn archetype:generate -DinteractiveMode=true -DarchetypeCatalog=local -DarchetypeGroupId=cz.baros.wildfly.sy.sca -DarchetypeArtifactId=sca-binding-test-archetype -DarchetypeVersion=1.0.0-SNAPSHOT
