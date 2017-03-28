@@ -1,0 +1,18 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:bean="urn:switchyard-component-bean:config:2.0" xmlns:sca="http://docs.oasis-open.org/ns/opencsa/sca/200912" xmlns:sy="urn:switchyard-config:switchyard:2.0" name="${parentArtifactId}-bean" targetNamespace="urn:${package}:${parentArtifactId}-bean:${version}">
+  <sca:composite name="${parentArtifactId}-bean" targetNamespace="urn:${package}:${parentArtifactId}-bean:${version}">
+    <sca:component name="GreetingBean">
+      <bean:implementation.bean class="${package}.sca_binding_test.services.GreetingBean"/>
+      <sca:service name="GreetingService">
+        <sca:interface.java interface="${package}.sca_binding_test.services.Greeting"/>
+      </sca:service>
+    </sca:component>
+    <sca:service name="GreetingService" promote="GreetingBean/GreetingService">
+      <sca:interface.java interface="${package}.sca_binding_test.services.Greeting"/>
+      <sca:binding.sca name="greeting_sca"/>
+    </sca:service>
+  </sca:composite>
+</sy:switchyard>

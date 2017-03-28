@@ -1,0 +1,5 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<sy:switchyard xmlns:sy="urn:switchyard-config:switchyard:2.0" name="${parentArtifactId}-artifacts" targetNamespace="urn:${package}:${parentArtifactId}-artifacts:${version}"/>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="sca-binding-test-ear">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/ear-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/application" tag="defaultRootSource"/>
+        <dependent-module archiveName="sca-binding-test-artifacts.jar" deploy-path="/lib" handle="module:/resource/sca-binding-test-artifacts/sca-binding-test-artifacts">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sca-binding-test-bean.jar" deploy-path="/" handle="module:/resource/sca-binding-test-bean/sca-binding-test-bean">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="sca-binding-test-web.war" deploy-path="/" handle="module:/resource/sca-binding-test-web/sca-binding-test-web">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="component.inclusion.patterns" value="sca-binding-test-*,lib/*,META-INF/*"/>
+    </wb-module>
+</project-modules>
